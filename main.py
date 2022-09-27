@@ -32,8 +32,12 @@ print(add_hobby(person, "Table Tennis"))
 
 
 def add_job(person, job):
-    pass
+    if job not in person:
+        person["job"] = job
+    return person
 
+
+print(add_job(person,'system administrator'))
 
 # 2. Create a function called `check_hobbies`, which takes a person dictionary as an argument. This function checks the number of hobbies for this person, if it's more than three hobbies, print to the user a message telling them that they're talented.
 
